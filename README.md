@@ -30,7 +30,7 @@ The following diagram represent the preceding Big O notations:
 - The X axis to represents the number of items (n) in the data structure.
 - The Y axis represents the time (O) required to perform an operation.
 
-![](bigo.png)
+<img src="bigo.png" width="650" />
 
 Consider trying a different data structure / algorithm if its performance is Quadratic, Cubic or Exponential.
 
