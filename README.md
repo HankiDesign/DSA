@@ -41,9 +41,11 @@ If your algorithm uses a loop, it will be likely to have a linear performance O(
 
 # Data Structures
 
-## Single linked list
+## Singly linked list
 Each node contains a reference to the next node in the list.
 To improve performance it is recommended to keep a reference to the first node in the list (head) and the last node in the list (tail).
+
+![](singly-linked-list.png)
 
 Linked list are good for dynamic resizing and have a constant O(1) performance for head or tail insertions.
 
