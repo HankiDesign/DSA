@@ -73,15 +73,17 @@ Doubly linked list are good for dynamic resizing, have a constant O(1) performan
 Singly and doubly linked list are a good option when you know that you will insert, read or delete from the head or tail of the list. However, they are not a good option when searching, accesing by index or inserting between the tail and head nodes.
 
 ## Circular linked list
-Another method of implementing a linked list involves using a circular form so that the last node points back to the first node.
+Another method of implementing a linked list (singly or doubly linked) involves using a circular form so that the last node points back to the first node.
 
 ![](circularlist.png)
 
 Circular data structure would be more natural when used to represent circular problems (e.g turns in card game).
 Circular linked List allow us to traverse the entire list starting from any node and allow as to think about fewer 
-special cases when coding (all nodes have a node before and after it).
+special cases when coding (all nodes have a node before and after it). 
 
-However, finding end of list and loop control is harder (no NULL's to mark beginning and end). Another problem is that if we point to the start of the list and we want to add/remove an item to the front, we would need to go through the entire list in order to find the last node so that we could keep the linked list hooked up properly. The solution to this problem is to forget about the head reference entirely and just have a tail reference (if we point to just the tail node, it is very very easy to find out the gead node).
+However, finding end of list and loop control is harder (no NULL's to mark beginning and end). 
+
+Another problem is that if we point to the start of the list and we want to add/remove an item to the front, we would need to go through the entire list in order to find the last node so that we could keep the linked list hooked up properly. The solution to this problem is to forget about the head reference entirely and just have a tail reference (if we point to just the tail node, it is very very easy to find out the gead node).
 
 - Insertion in head or tail O(1)
 - Insertion between head and tail O(n)
