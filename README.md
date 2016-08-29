@@ -57,8 +57,10 @@ Linked list are good for dynamic resizing and have a constant O(1) performance f
 - Traversing O(n)
 - Reverse traversal O(n^2)
 
-## Double linked list
+## Doubly linked list
 TODO
+
+![](doubly-linked-list.png)
 
 # Algorithms
 TODO
