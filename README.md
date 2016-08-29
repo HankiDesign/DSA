@@ -1,14 +1,11 @@
 # About this repo 
-I'm preparing myself for a whiteboard test.
+I'm preparing myself for a whiteboard test. I'm a front-end developer and I don't get to deal with complex data structures on daily basis. I need to try to remember these when I have a technical interview so I decided to document my preparation for the interview so it can save time to other developers 
+preparing for a technical interview.
 
 I'm quite confortable with design patterns and object-oriented programming concepts so I will not document those. This document 
 focuses on data structures and algorithms (DSA). 
 
-I'm a front-end developer and I don't get to deal with complex data structures on daily basis. I need to try to remember these when 
-I have a technical interview so I decided to document my preparation for the interview so it can save time to other developers 
-preparing for a technical interview.
-
-I hope you find this useful.
+I hope that other developers will find this guide useful when preparing for a technical interview.
 
 # Learning Resources
 My two main learning resources are:
