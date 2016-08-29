@@ -73,6 +73,30 @@ Doubly linked list are good for dynamic resizing, have a constant O(1) performan
 - Traversing O(n)
 - Reverse traversal O(n)
 
+## Circular list
+TODO
+
+## Heap
+TODO
+
+## Queue
+TODO
+
+## Sets
+TODO
+
+# Hash table
+TODO
+
+## Binary Search Tree (BST)
+TODO
+
+## Self-balancing binary search tree (AVL Tree)
+TODO
+
+## Graphs
+TODO
+
 # Algorithms
 TODO
 
