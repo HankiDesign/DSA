@@ -38,6 +38,27 @@ If your algorithm uses a loop, it will be likely to have a linear performance O(
 
 # Data Structures
 
+## Queue
+A queue is a list that keeps a reference to its head and tail. The main difference between a linked list and a queue
+is that the queue only allow us to add items to its tail and remove items from its head.
+
+![](queue.jpg)
+
+- Insertion in tail O(1)
+- Deletion in head O(1)
+- Searching O(n)
+- Traversing O(n)
+- Reverse traversal of a standard queue O(n^2)
+
+Priority queues insert elements in a position based on its priority level. Some implementations of
+priority queue use a heap data structure under the hood so its execution tames are the same as a 
+standard queue.
+
+## Stack
+TODO
+
+![](stack.png)
+
 ## Singly linked list
 Each node contains a reference to the next node in the list.
 To improve performance it is recommended to keep a reference to the first node in the list (head) and the last node in the list (tail).
@@ -92,12 +113,6 @@ Another problem is that if we point to the start of the list and we want to add/
 - Searching O(n)
 - Traversing O(n)
 - Reverse traversal O(n)
-
-## Heap
-TODO
-
-## Queue
-TODO
 
 ## Sets
 TODO
