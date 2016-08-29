@@ -73,6 +73,8 @@ Doubly linked list are good for dynamic resizing, have a constant O(1) performan
 - Traversing O(n)
 - Reverse traversal O(n)
 
+Singly and doubly linked list are a good option when you know that you will insert, read or delete from the head or tail of the list. However, they are not a good option when searching, accesing by index or inserting between the tail and head nodes.
+
 ## Circular list
 TODO
 
