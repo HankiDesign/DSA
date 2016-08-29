@@ -85,7 +85,7 @@ TODO
 ## Sets
 TODO
 
-# Hash table
+## Hash table
 TODO
 
 ## Binary Search Tree (BST)
