@@ -47,7 +47,7 @@ To improve performance it is recommended to keep a reference to the first node i
 
 ![](singly-linked-list.png)
 
-Linked list are good for dynamic resizing and have a constant O(1) performance for head or tail insertions.
+Linked list are good for dynamic resizing and have a constant O(1) performance for head or tail insertion and deletion.
 
 - Insertion in head or tail O(1)
 - Insertion between head and tail O(n)
