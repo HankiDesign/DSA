@@ -47,7 +47,7 @@ To improve performance it is recommended to keep a reference to the first node i
 
 ![](singly-linked-list.png)
 
-Linked list are good for dynamic resizing and have a constant O(1) performance for head or tail insertion and deletion.
+Singly linked list are good for dynamic resizing and have a constant O(1) performance for head or tail insertion and deletion.
 
 - Insertion in head or tail O(1)
 - Insertion between head and tail O(n)
@@ -58,9 +58,20 @@ Linked list are good for dynamic resizing and have a constant O(1) performance f
 - Reverse traversal O(n^2)
 
 ## Doubly linked list
-TODO
+Each node contains a reference to the next and previous nodes in the list.
+To improve performance it is recommended to keep a reference to the first node in the list (head) and the last node in the list (tail).
 
 ![](doubly-linked-list.png)
+
+Doubly linked list are good for dynamic resizing, have a constant O(1) performance for head or tail insertion and deletion and have a better O(n) for reverse traversal operations than singly linked lists O(n^2).
+
+- Insertion in head or tail O(1)
+- Insertion between head and tail O(n)
+- Deletion head or tail  O(1)
+- Deletion between head and tail O(n)
+- Searching O(n)
+- Traversing O(n)
+- Reverse traversal O(n)
 
 # Algorithms
 TODO
