@@ -12,6 +12,7 @@ My two main learning resources are:
 
 - [Data Structures and Algorithms: Annotated Reference with Examples](http://lib.mdp.ac.id/ebook/Karya%20Umum/Dsa.pdf) by Granville Barnett, and Luca Del Tongo
 - [Cracking the Coding Interview: 189 Programming Questions and Solutions](http://amzn.to/2btJOH8) by Gayle Laakmann McDowell
+- [Big-O Cheat Sheet](http://bigocheatsheet.com/) by Eric Rowell
 
 # Big O notation
 Some of the most common Big O notations include:
