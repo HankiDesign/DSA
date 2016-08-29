@@ -57,7 +57,7 @@ standard queue.
 ## Stack
 TODO
 
-![](stack.png)
+<img src="stack.png" width="500" />
 
 ## Singly linked list
 Each node contains a reference to the next node in the list.
