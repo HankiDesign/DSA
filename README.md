@@ -40,8 +40,9 @@ If your algorithm uses a loop, it will be likely to have a linear performance O(
 # Data Structures
 
 ## Queue
-A queue is a list that keeps a reference to its head and tail. The main difference between a linked list and a queue
-is that the queue only allow us to add items to its tail and remove items from its head.
+A queue is an ordered list that keeps a reference to its head and tail. The queue is a FIFO structure.
+The main difference between a linked list and a queue is that the queue only allow us to add items to 
+its tail and remove items from its head.
 
 ![](queue.jpg)
 
@@ -49,16 +50,21 @@ is that the queue only allow us to add items to its tail and remove items from i
 - Deletion in head O(1)
 - Searching O(n)
 - Traversing O(n)
-- Reverse traversal of a standard queue O(n^2)
 
 Priority queues insert elements in a position based on its priority level. Some implementations of
 priority queue use a heap data structure under the hood so its execution tames are the same as a 
 standard queue.
 
 ## Stack
-TODO
+Stack is an ordered list of similar data type. Stack is a LIFO structure.  
+Both insertion and deletion are allowed at only one end of Stack called Top.
 
 <img src="stack.png" width="500" />
+
+- Insertion in head or tail O(1)
+- Deletion head or tail  O(1)
+- Searching O(n)
+- Traversing O(n)
 
 ## Singly linked list
 Each node contains a reference to the next node in the list.
