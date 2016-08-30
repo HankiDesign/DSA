@@ -56,10 +56,11 @@ priority queue use a heap data structure under the hood so its execution tames a
 standard queue.
 
 ## Stack
-Stack is an ordered list of similar data type. Stack is a LIFO structure.  
-Both insertion and deletion are allowed at only one end of Stack called Top.
+Stack is an ordered list of similar data type. Stack is a LIFO structure. Both insertion and deletion are allowed at only one end of Stack called Top.
 
 <img src="stack.png" width="500" />
+
+An stack is good when you need to "do" and "undo" something. Many parsing problems (e.g validate blocks properly closed in a programming language) can be solved using a stack.
 
 - Insertion in head or tail O(1)
 - Deletion head or tail  O(1)
