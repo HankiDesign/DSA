@@ -7,6 +7,8 @@ focuses on data structures and algorithms (DSA).
 
 I hope that other developers will find this guide useful when preparing for a technical interview.
 
+You can read it online or [download this document as a PDF](https://github.com/remojansen/DSA/raw/master/pdf.pdf).
+
 # Learning Resources
 My two main learning resources are:
 
