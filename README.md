@@ -122,12 +122,6 @@ Another problem is that if we point to the start of the list and we want to add/
 - Traversing O(n)
 - Reverse traversal O(n)
 
-## Sets
-TODO
-
-## Hash table
-TODO
-
 ## Binary Search Tree (BST)
 Binary search trees (BSTs) start with a root node with value x, where the left subtree of x contains nodes with values < x
 and the right subtree contains nodes whose values are ≥ x. 
@@ -163,6 +157,15 @@ The value of the current node is yielded in between traversing the left subtree 
 Traversing a tree in breadth first order yields the values of all nodes of a particular depth in the tree before any deeper ones.
 
 ![](bst_breadth_first.png)
+
+## Heap
+TODO
+
+## Sets
+TODO
+
+## Hash table
+TODO
 
 ## Self-balancing binary search tree (AVL Tree)
 TODO
