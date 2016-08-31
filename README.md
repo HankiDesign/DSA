@@ -136,7 +136,13 @@ Each node follows the same rules with respect to nodes in their left and right s
 
 ![](bst.png)
 
-TODO
+BSTs are of interest because insertion, search, and deletion can all be done in O(log n) time. It is important
+to note that the O(log n) times for these operations can only be attained if the BST is reasonably balanced (a pathologically unbalanced tree become linear and  is effectively just a linked list).
+
+- Insertion O(log n)
+- Deletion O(log n)
+- Searching O(log n)
+- Traversing (Preorder, Postorder, Inorder & Breadth first) O(n)
 
 ### Preorder BST traversal
 Then traverse the left subtree and finally traverse the right subtree.
