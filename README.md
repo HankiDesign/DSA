@@ -10,7 +10,7 @@ I hope that other developers will find this guide useful when preparing for a te
 You can read it online or [download this document as a PDF](https://github.com/remojansen/DSA/raw/master/pdf.pdf).
 
 # Learning Resources
-My two main learning resources are:
+My main learning resources are:
 
 - [Data Structures and Algorithms: Annotated Reference with Examples](http://lib.mdp.ac.id/ebook/Karya%20Umum/Dsa.pdf) by Granville Barnett, and Luca Del Tongo
 - [Cracking the Coding Interview: 189 Programming Questions and Solutions](http://amzn.to/2btJOH8) by Gayle Laakmann McDowell
@@ -40,22 +40,6 @@ Consider trying a different data structure / algorithm if its performance is Qua
 If your algorithm uses a loop, it will be likely to have a linear performance O(n), if you use a loop inside a loop (e.g. traverse a 2D matrix) it will be likely to a quadratic performance O(n^2).
 
 # Data Structures
-
-## Queue
-A queue is an ordered list that keeps a reference to its head and tail. The queue is a FIFO structure.
-The main difference between a linked list and a queue is that the queue only allow us to add items to 
-its tail and remove items from its head.
-
-![](queue.jpg)
-
-- Insertion in tail O(1)
-- Deletion in head O(1)
-- Searching O(n)
-- Traversing O(n)
-
-Priority queues insert elements in a position based on its priority level. Some implementations of
-priority queue use a heap data structure under the hood so its execution tames are the same as a 
-standard queue.
 
 ## Stack
 Stack is an ordered list of similar data type. Stack is a LIFO structure. Both insertion and deletion are allowed at only one end of Stack called Top.
@@ -140,6 +124,16 @@ to note that the O(log n) times for these operations can only be attained if the
 - Searching O(log n)
 - Traversing (Preorder, Postorder, Inorder & Breadth first) O(n)
 
+### BST Deletion
+Inserting and searching for a node is very simple but removing an element is not straight forward and requires to consider 3 cases:
+
+- If the node to be removed has no children (leaf node) we just simply remove it.
+- Node to be removed has one child. It this case, node is cut from the tree and algorithm links single child (with it's subtree) directly to the parent of the removed node.
+- Node to be removed has two children. In this case we need to find the minimum value in the right subtree. Replace value of the node to be removed with found minimum. 
+Now, right subtree contains a duplicate! Apply remove to the right subtree to remove a duplicate.
+
+![](bst_deletion.png)
+
 ### Preorder BST traversal
 Then traverse the left subtree and finally traverse the right subtree.
 
@@ -160,8 +154,52 @@ Traversing a tree in breadth first order yields the values of all nodes of a par
 
 ![](bst_breadth_first.png)
 
+## Queue
+A queue is an ordered list that keeps a reference to its head and tail. The queue is a FIFO structure.
+The main difference between a linked list and a queue is that the queue only allow us to add items to 
+its tail and remove items from its head.
+
+![](queue.jpg)
+
+- Insertion in tail O(1)
+- Deletion in head O(1)
+- Searching O(n)
+- Traversing O(n)
+
+Priority queues insert elements in a position based on its priority level. Some implementations of
+priority queue use a heap data structure under the hood so its execution tames are the same as a 
+standard queue.
+
 ## Heap
-TODO
+A heap is a specialized tree-based data structure that satisfies the heap property. If A is a parent node of B 
+then the key (the value) of node A is ordered with respect to the key of node B with the same ordering applying 
+across the heap.
+
+The heap can follow two strategies:
+
+- Min heap: each parent node would have a value that is <= than its children.
+- Max heap: each parent node would have a value that is > than its children.
+
+Heaps are most commonly used to implement priority queues and to facilitate heap sort.
+
+Unlike other tree data structures a heap is generally implemented as an array rather 
+than a series of nodes which each have references to other nodes. 
+
+The nodes are conceptually the same, however, having at most two children.
+
+The following figure shows how the tree (not a heap data structure) would be represented as an array.
+
+![](tree-as-array.png)
+
+The following figure shows how we could implement adding elements to a heap:
+
+![](heap-inserting.png)
+
+There are multiple possible implementations of heaps with different execution times. 
+For example, a fibonacci heap has a better running time than many other priority queue data structures 
+including the binary heap and binomial heap.
+
+![](heap-big-o.png)
 
 ## Sets
 TODO
