@@ -129,7 +129,34 @@ TODO
 TODO
 
 ## Binary Search Tree (BST)
+Binary search trees (BSTs) start with a root node with value x, where the left subtree of x contains nodes with values < x
+and the right subtree contains nodes whose values are ≥ x. 
+
+Each node follows the same rules with respect to nodes in their left and right subtrees
+
+![](bst.png)
+
 TODO
+
+### Preorder BST traversal
+Then traverse the left subtree and finally traverse the right subtree.
+
+![](bst_preorder.png)
+
+### Postorder BST traversal
+The value of the node is yielded after traversing both subtrees.
+
+![](bst_postorder.png)
+
+### Inorder BST traversal
+The value of the current node is yielded in between traversing the left subtree and the right subtree
+
+![](bst_inorder.png)
+
+### Breadth first BST traversal
+Traversing a tree in breadth first order yields the values of all nodes of a particular depth in the tree before any deeper ones.
+
+![](bst_breadth_first.png)
 
 ## Self-balancing binary search tree (AVL Tree)
 TODO
