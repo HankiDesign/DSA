@@ -1,9 +1,14 @@
 # About this document 
-I'm preparing myself for a whiteboard test. I'm a front-end developer and I don't get to deal with complex data structures on daily basis. I need to try to remember these when I have a technical interview so I decided to document my preparation for the interview so it can save time to other developers 
-preparing for a technical interview.
+I'm preparing myself for a whiteboard test. I'm a front-end developer and I don't get to deal with complex data structures on daily basis. I need to try to remember these when I have a technical interview so I decided to document my preparation for the interview so it can save time to other developers  preparing for a technical interview.
 
-I'm quite confortable with design patterns and object-oriented programming concepts so I will not document those. This document 
-focuses on data structures and algorithms (DSA). 
+Whiteboard tests usualy cover topics like:
+
+- Data structures and algorithms (DSA).
+- Object-oriented principles and design.
+- System design principles.
+
+This document focuses on data structures and algorithms (DSA). I'm quite confortable with design patterns and object-oriented programming concepts and I have limited time so I will not document those. If you need help to prepare your system design architecture you can refer to the open source [system design interview](https://github.com/checkcheckzz/system-design-interview) guide available on github.
+
 
 I hope that other developers will find this guide useful when preparing for a technical interview.
 
