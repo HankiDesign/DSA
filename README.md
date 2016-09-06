@@ -222,4 +222,54 @@ TODO
 TODO
 
 # Questions & Answers
+Here you can find some DSA interview questions.
+
+## Implement a Fibonacci sequence using recursive and sequentialal gorithms
+
+The pattern of the Fibonacci sequence is that each value is the sum of the 2 previous values:
+
+```
+F(n) = F(n-1) + F(n-2)
+```
+
+Sequential (Basic) O(n):
+
+```js
+function fibonacci(num){
+  var a = 1, b = 0, temp;
+
+  while (num >= 0){
+    temp = a;
+    a = a + b;
+    b = temp;
+    num--;
+  }
+
+  return b;
+}
+```
+
+Sequential (Optimized via Memoization) O(2*n):
+
+```js
+function fibonacci(num, memo) {
+  memo = memo || {};
+
+  if (memo[num]) return memo[num];
+  if (num <= 1) return 1;
+
+  return memo[num] = fibonacci(num - 1, memo) + fibonacci(num - 2, memo);
+}
+```
+
+Recuersive O(2^n):
+
+```js
+function fibonacci(num) {
+  if (num <= 1) return 1;
+
+  return fibonacci(num - 1) + fibonacci(num - 2);
+}
+```
+
 TODO
