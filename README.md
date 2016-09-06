@@ -249,7 +249,17 @@ function fibonacci(num){
 }
 ```
 
-Sequential (Optimized via Memoization) O(2*n):
+Recuersive O(2^n):
+
+```js
+function fibonacci(num) {
+  if (num <= 1) return 1;
+
+  return fibonacci(num - 1) + fibonacci(num - 2);
+}
+```
+
+Recuersive (Optimized via Memoization) O(2*n):
 
 ```js
 function fibonacci(num, memo) {
@@ -259,16 +269,6 @@ function fibonacci(num, memo) {
   if (num <= 1) return 1;
 
   return memo[num] = fibonacci(num - 1, memo) + fibonacci(num - 2, memo);
-}
-```
-
-Recuersive O(2^n):
-
-```js
-function fibonacci(num) {
-  if (num <= 1) return 1;
-
-  return fibonacci(num - 1) + fibonacci(num - 2);
 }
 ```
 
