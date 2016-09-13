@@ -12,8 +12,6 @@ This document focuses on data structures and algorithms (DSA). I'm quite confort
 
 I hope that other developers will find this guide useful when preparing for a technical interview.
 
-You can read it online or [download this document as a PDF](https://github.com/remojansen/DSA/raw/master/pdf.pdf).
-
 # Learning Resources
 My main learning resources are:
 
@@ -38,7 +36,7 @@ The following diagram represent the preceding Big O notations:
 - The X axis to represents the number of items (n) in the data structure.
 - The Y axis represents the time (O) required to perform an operation.
 
-<img src="bigo.png" width="650" />
+<img src="./assets/bigo.png" width="650" />
 
 Consider trying a different data structure / algorithm if its performance is Quadratic, Cubic or Exponential.
 
@@ -49,7 +47,7 @@ If your algorithm uses a loop, it will be likely to have a linear performance O(
 ## Stack
 Stack is an ordered list of similar data type. Stack is a LIFO structure. Both insertion and deletion are allowed at only one end of Stack called Top.
 
-<img src="stack.png" width="500" />
+<img src="./assets/stack.png" width="500" />
 
 An stack is good when you need to "do" and "undo" something. Many parsing problems (e.g validate blocks properly closed in a programming language) can be solved using a stack.
 
@@ -62,7 +60,7 @@ An stack is good when you need to "do" and "undo" something. Many parsing proble
 Each node contains a reference to the next node in the list.
 To improve performance it is recommended to keep a reference to the first node in the list (head) and the last node in the list (tail).
 
-![](singly-linked-list.png)
+![](./assets/singly-linked-list.png)
 
 Singly linked list are good for dynamic resizing and have a constant O(1) performance for head or tail insertion and deletion.
 
@@ -95,7 +93,7 @@ Singly and doubly linked list are a good option when you know that you will inse
 ## Circular linked list
 Another method of implementing a linked list (singly or doubly linked) involves using a circular form so that the last node points back to the first node.
 
-![](circularlist.png)
+![](./assets/circularlist.png)
 
 Circular data structure would be more natural when used to represent circular problems (e.g turns in card game).
 Circular linked List allow us to traverse the entire list starting from any node and allow as to think about fewer 
@@ -119,7 +117,7 @@ and the right subtree contains nodes whose values are ≥ x.
 
 Each node follows the same rules with respect to nodes in their left and right subtrees
 
-![](bst.png)
+![](./assets/bst.png)
 
 BSTs are of interest because insertion, search, and deletion can all be done in O(log n) time. It is important
 to note that the O(log n) times for these operations can only be attained if the BST is reasonably balanced (a pathologically unbalanced tree become linear and  is effectively just a linked list).
@@ -137,34 +135,34 @@ Inserting and searching for a node is very simple but removing an element is not
 - Node to be removed has two children. In this case we need to find the minimum value in the right subtree. Replace value of the node to be removed with found minimum. 
 Now, right subtree contains a duplicate! Apply remove to the right subtree to remove a duplicate.
 
-![](bst_deletion.png)
+![](./assets/bst_deletion.png)
 
 ### Preorder BST traversal
 Then traverse the left subtree and finally traverse the right subtree.
 
-![](bst_preorder.png)
+![](./assets/bst_preorder.png)
 
 ### Postorder BST traversal
 The value of the node is yielded after traversing both subtrees.
 
-![](bst_postorder.png)
+![](./assets/bst_postorder.png)
 
 ### Inorder BST traversal
 The value of the current node is yielded in between traversing the left subtree and the right subtree
 
-![](bst_inorder.png)
+![](./assets/bst_inorder.png)
 
 ### Breadth first BST traversal
 Traversing a tree in breadth first order yields the values of all nodes of a particular depth in the tree before any deeper ones.
 
-![](bst_breadth_first.png)
+![](./assets/bst_breadth_first.png)
 
 ## Queue
 A queue is an ordered list that keeps a reference to its head and tail. The queue is a FIFO structure.
 The main difference between a linked list and a queue is that the queue only allow us to add items to 
 its tail and remove items from its head.
 
-![](queue.jpg)
+![](./assets/queue.jpg)
 
 - Insertion in tail O(1)
 - Deletion in head O(1)
@@ -194,26 +192,51 @@ The nodes are conceptually the same, however, having at most two children.
 
 The following figure shows how the tree (not a heap data structure) would be represented as an array.
 
-![](tree-as-array.png)
+![](./assets/tree-as-array.png)
 
 The following figure shows how we could implement adding elements to a heap:
 
-![](heap-inserting.png)
+![](./assets/heap-inserting.png)
 
 There are multiple possible implementations of heaps with different execution times. 
 For example, a fibonacci heap has a better running time than many other priority queue data structures 
 including the binary heap and binomial heap.
 
-![](heap-big-o.png)
+![](./assets/heap-big-o.png)
 
 ## Sets
-TODO
+A set contains a number of values, in no particular order. The values within
+the set are distinct from one another.
+
+![](./assets/set.png)
+
+It is common to work with multiple sets and perform operations like:
+
+- Insertion O(1)
+- Deletion O(1)
+- Searching O(1)
+- Traversing O(n)
+- Union O(n + m) where n and m are the number of items in each set
+- Intersection O(n) where n is the number of items in the smallest set
+- Disjunction (AKA simetric difference) O(n) where n is the number of items in the smallest set
+- Substraction O(n) where n is the number of items in right side of the operator
 
 ## Hash table
-TODO
+
+![](./assets/hashtable.png)
 
 ## Self-balancing binary search tree (AVL Tree)
-TODO
+An AVL tree is a BST with an additional condition: the difference between the height 
+of the left and righ subtrees cannot be more than one.
+
+- Rotation O(n) 
+- Insertion O(log n)
+- Deletion O(log n)
+- Searching O(log n)
+- Traversing O(n)
+
+Insertion/Deletion in AVL tree uses [Single rotation](https://www.youtube.com/watch?v=YKt1kquKScY) 
+or [Double rotation](https://www.youtube.com/watch?v=vwVXN9NCWaA) to keep the tree in balance.
 
 ## Graphs
 TODO
