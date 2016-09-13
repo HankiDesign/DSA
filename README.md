@@ -76,7 +76,7 @@ Singly linked list are good for dynamic resizing and have a constant O(1) perfor
 Each node contains a reference to the next and previous nodes in the list.
 To improve performance it is recommended to keep a reference to the first node in the list (head) and the last node in the list (tail).
 
-![](doubly-linked-list.png)
+![](./assets/doubly-linked-list.png)
 
 Doubly linked list are good for dynamic resizing, have a constant O(1) performance for head or tail insertion and deletion and have a better O(n) for reverse traversal operations than singly linked lists O(n^2).
 
@@ -222,8 +222,18 @@ It is common to work with multiple sets and perform operations like:
 - Substraction O(n) where n is the number of items in right side of the operator
 
 ## Hash table
+A  hash table (AKA hash map) is a data structure used to implement an associative array, 
+a structure that can map keys to values. A hash table uses a hash function to compute 
+an index into an array of buckets or slots, from which the desired value can be found.
 
 ![](./assets/hashtable.png)
+
+If the hash function is not powerful enough it can lead to collisions.
+
+- Insertion O(1)
+- Deletion O(1)
+- Searching O(1) best O(log n) worst (collisions managed via AVL)
+- Traversing O(n)
 
 ## Self-balancing binary search tree (AVL Tree)
 An AVL tree is a BST with an additional condition: the difference between the height 
@@ -239,10 +249,30 @@ Insertion/Deletion in AVL tree uses [Single rotation](https://www.youtube.com/wa
 or [Double rotation](https://www.youtube.com/watch?v=vwVXN9NCWaA) to keep the tree in balance.
 
 ## Graphs
-TODO
+A graph data structure consists of a finite (and possibly mutable) set of vertices or nodes or 
+points, together with a set of unordered pairs of these vertices for an undirected graph or 
+a set of ordered pairs for a directed graph.
+
+A graph can be represented using a matrix:
+
+<img src="./assets/GraphMatrix.jpg" width="500" />
 
 # Algorithms
-TODO
+The most popular sorting algorithms are:
+
+- Bubble sort TODO
+- Merge sort TODO
+- Quick sort TODO
+- Insertion sort TODO
+- Shell sort TODO
+- Radix sort TODO
+
+![](./assets/algo.png)
+
+The most popular searching algorithms are:
+
+- Sequential search TODO
+- Probability search TODO
 
 # Questions & Answers
 Here you can find some DSA interview questions.
@@ -295,4 +325,23 @@ function fibonacci(num, memo) {
 }
 ```
 
+## Determine if a given number is prime
 TODO
+
+## Translate a number into binary
+TODO
+
+## Find the greatest common denominator
+TODO
+
+## Calculate the factorial of a number
+TODO
+
+```js
+function fact(x) {
+   if(x==0) {
+      return 1;
+   }
+   return x * fact(x-1);
+}
+```
