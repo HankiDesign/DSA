@@ -260,12 +260,205 @@ A graph can be represented using a matrix:
 # Algorithms
 The most popular sorting algorithms are:
 
-- Bubble sort TODO
-- Merge sort TODO
-- Quick sort TODO
-- Insertion sort TODO
-- Shell sort TODO
-- Radix sort TODO
+- Bubble sort O(n^2)
+
+```js
+var a = [34, 203, 3, 746, 200, 984, 198, 764, 9];
+ 
+function bubbleSort(a)
+{
+    var swapped;
+    do {
+        swapped = false;
+        for (var i=0; i < a.length-1; i++) {
+            if (a[i] > a[i+1]) {
+                var temp = a[i];
+                a[i] = a[i+1];
+                a[i+1] = temp;
+                swapped = true;
+            }
+        }
+    } while (swapped);
+}
+ 
+bubbleSort(a);
+console.log(a);
+```
+
+- Merge sort O(n log n)
+
+```js
+/**
+ * Merges to arrays in order based on their natural
+ * relationship.
+ * @param {Array} left The first array to merge.
+ * @param {Array} right The second array to merge.
+ * @return {Array} The merged array.
+ */
+function merge(left, right){
+    var result  = [],
+        il      = 0,
+        ir      = 0;
+
+    while (il < left.length && ir < right.length){
+        if (left[il] < right[ir]){
+            result.push(left[il++]);
+        } else {
+            result.push(right[ir++]);
+        }
+    }
+
+    return result.concat(left.slice(il)).concat(right.slice(ir));
+}
+
+/**
+ * Sorts an array in ascending natural order using
+ * merge sort.
+ * @param {Array} items The array to sort.
+ * @return {Array} The sorted array.
+ */
+function mergeSort(items){
+
+    if (items.length < 2) {
+        return items;
+    }
+
+    var middle = Math.floor(items.length / 2),
+        left    = items.slice(0, middle),
+        right   = items.slice(middle),
+        params = merge(mergeSort(left), mergeSort(right));
+    
+    // Add the arguments to replace everything between 0 and last item in the array
+    params.unshift(0, items.length);
+    items.splice.apply(items, params);
+    return items;
+}
+```
+
+- Quick sort O(n log n)
+
+```js
+/**
+ * Swaps two values in an array.
+ * @param {Array} items The array containing the items.
+ * @param {int} firstIndex Index of first item to swap.
+ * @param {int} secondIndex Index of second item to swap.
+ * @return {void}
+ */
+function swap(items, firstIndex, secondIndex){
+    var temp = items[firstIndex];
+    items[firstIndex] = items[secondIndex];
+    items[secondIndex] = temp;
+}
+
+function partition(items, left, right) {
+
+    var pivot   = items[Math.floor((right + left) / 2)],  // pivot value is middle item
+        i       = left,     // starts from left and goes right to pivot index
+        j       = right;    // starts from right and goes left to pivot index
+
+
+    // while the two indices don't match
+    while (i <= j) {
+
+        // if the item on the left is less than the pivot, continue right
+        while (items[i] < pivot) {
+            i++;
+        }
+
+        // if the item on the right is greater than the pivot, continue left
+        while (items[j] > pivot) {
+            j--;
+        }
+
+        // if the two indices still don't match, swap the values
+        if (i <= j) {
+            swap(items, i, j);
+
+            // change indices to continue loop
+            i++;
+            j--;
+        }
+    }
+
+    // this value is necessary for recursion
+    return i;
+}
+
+/**
+ * A quicksort implementation in JavaScript. The array
+ * is sorted in place.
+ * @param {Array} items An array of items to sort.
+ * @return {Array} The sorted array.
+ */
+function quickSort(items, left, right) {
+
+    var index;
+
+    // performance - don't sort an array with zero or one items
+    if (items.length > 1) {
+
+        // fix left and right values - might not be provided
+        left = typeof left != "number" ? 0 : left;
+        right = typeof right != "number" ? items.length - 1 : right;
+
+        // split up the entire array
+        index = partition(items, left, right);
+
+        // if the returned index
+        if (left < index - 1) {
+            quickSort(items, left, index - 1);
+        }
+
+        if (index < right) {
+            quickSort(items, index, right);
+        }
+
+    }
+
+    return items;
+}
+
+```
+
+- Insertion sort O(n ^ 2)
+
+```js
+/**
+ * An insertion sort implementation in JavaScript. The array
+ * is sorted in-place.
+ * @param {Array} items An array of items to sort.
+ * @return {Array} The sorted array.
+ */
+function insertionSort(items) {
+
+    var len     = items.length,     // number of items in the array
+        value,                      // the value currently being compared
+        i,                          // index into unsorted section
+        j;                          // index into sorted section
+    
+    for (i=0; i < len; i++) {
+    
+        // store the current value because it may shift later
+        value = items[i];
+        
+        /*
+         * Whenever the value in the sorted section is greater than the value
+         * in the unsorted section, shift all items in the sorted section over
+         * by one. This creates space in which to insert the value.
+         */
+        for (j=i-1; j > -1 && items[j] > value; j--) {
+            items[j+1] = items[j];
+        }
+
+        items[j+1] = value;
+    }
+    
+    return items;
+}
+```
+
+We should try to aim for quick sort.
 
 ![](./assets/algo.png)
 
@@ -274,8 +467,8 @@ The most popular searching algorithms are:
 - Sequential search
 - Probability search
 
-# Questions & Answers
-Here you can find some DSA interview questions.
+# Numbers
+Here you can find some common questions about numbers.
 
 ## Implement a Fibonacci sequence using recursive and sequentialal gorithms
 
