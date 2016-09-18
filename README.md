@@ -271,8 +271,8 @@ The most popular sorting algorithms are:
 
 The most popular searching algorithms are:
 
-- Sequential search TODO
-- Probability search TODO
+- Sequential search
+- Probability search
 
 # Questions & Answers
 Here you can find some DSA interview questions.
@@ -326,17 +326,41 @@ function fibonacci(num, memo) {
 ```
 
 ## Determine if a given number is prime
-TODO
+> A prime number (or a prime) is a natural number greater 
+> than 1 that has no positive divisors other than 1 and itself.
+```js
+function isPrime(number) {
+    var start = 2;
+    while (start <= Math.sqrt(number)) {
+        start = start + 1;
+        if ((number % start) < 1) return false;
+    }
+    return number > 1;
+}
+```
 
 ## Translate a number into binary
-TODO
+```js
+function dec2bin(dec){
+    return (dec >>> 0).toString(2);
+}
+```
 
 ## Find the greatest common denominator
-TODO
+> The greatest common divisor (gcd) of two or more integers, 
+> when at least one of them is not zero, is the largest positive integer that divides the numbers without a remainder.
+```js
+var gcd = function(a, b) {
+    if (!b) {
+        return a;
+    }
+    return gcd(b, a % b);
+};
+```
 
 ## Calculate the factorial of a number
-TODO
-
+> The factorial of a non-negative integer (n) is the product of all 
+> positive integers less than or equal to n.
 ```js
 function fact(x) {
    if(x==0) {
