@@ -328,6 +328,7 @@ function fibonacci(num, memo) {
 ## Determine if a given number is prime
 > A prime number (or a prime) is a natural number greater 
 > than 1 that has no positive divisors other than 1 and itself.
+
 ```js
 function isPrime(number) {
     var start = 2;
@@ -341,7 +342,7 @@ function isPrime(number) {
 
 ## Translate a number into binary
 ```js
-function dec2bin(dec){
+function dec2bin(dec) {
     return (dec >>> 0).toString(2);
 }
 ```
@@ -349,6 +350,7 @@ function dec2bin(dec){
 ## Find the greatest common denominator
 > The greatest common divisor (gcd) of two or more integers, 
 > when at least one of them is not zero, is the largest positive integer that divides the numbers without a remainder.
+
 ```js
 var gcd = function(a, b) {
     if (!b) {
@@ -361,6 +363,7 @@ var gcd = function(a, b) {
 ## Calculate the factorial of a number
 > The factorial of a non-negative integer (n) is the product of all 
 > positive integers less than or equal to n.
+
 ```js
 function fact(x) {
    if(x==0) {
