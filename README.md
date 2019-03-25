@@ -94,7 +94,7 @@ special cases when coding (all nodes have a node before and after it).
 
 However, finding end of list and loop control is harder (no NULL's to mark beginning and end). 
 
-Another problem is that if we point to the start of the list and we want to add/remove an item to the front, we would need to go through the entire list in order to find the last node so that we could keep the linked list hooked up properly. The solution to this problem is to forget about the head reference entirely and just have a tail reference (if we point to just the tail node, it is very very easy to find out the gead node).
+Another problem is that if we point to the start of the list and we want to add/remove an item to the front, we would need to go through the entire list in order to find the last node so that we could keep the linked list hooked up properly. The solution to this problem is to forget about the head reference entirely and just have a tail reference (if we point to just the tail node, it is very very easy to find out the head node).
 
 - Insertion in head or tail O(1)
 - Insertion between head and tail O(n)
@@ -108,12 +108,12 @@ Another problem is that if we point to the start of the list and we want to add/
 Binary search trees (BSTs) start with a root node with value x, where the left subtree of x contains nodes with values < x
 and the right subtree contains nodes whose values are ≥ x. 
 
-Each node follows the same rules with respect to nodes in their left and right subtrees
+Each node follows the same rules with respect to nodes in their left and right subtrees.
 
 ![](./assets/bst.png)
 
 BSTs are of interest because insertion, search, and deletion can all be done in O(log n) time. It is important
-to note that the O(log n) times for these operations can only be attained if the BST is reasonably balanced (a pathologically unbalanced tree become linear and  is effectively just a linked list).
+to note that the O(log n) times for these operations can only be attained if the BST is reasonably balanced (a pathologically unbalanced tree becomes linear and is effectively just a linked list).
 
 - Insertion O(log n)
 - Deletion O(log n)
@@ -124,7 +124,7 @@ to note that the O(log n) times for these operations can only be attained if the
 Inserting and searching for a node is very simple but removing an element is not straight forward and requires to consider 3 cases:
 
 - If the node to be removed has no children (leaf node) we just simply remove it.
-- Node to be removed has one child. It this case, node is cut from the tree and algorithm links single child (with it's subtree) directly to the parent of the removed node.
+- Node to be removed has one child. It this case, node is cut from the tree and algorithm links single child (with its subtree) directly to the parent of the removed node.
 - Node to be removed has two children. In this case we need to find the minimum value in the right subtree. Replace value of the node to be removed with found minimum. 
 Now, right subtree contains a duplicate! Apply remove to the right subtree to remove a duplicate.
 
@@ -152,7 +152,7 @@ Traversing a tree in breadth first order yields the values of all nodes of a par
 
 ## Queue
 A queue is an ordered list that keeps a reference to its head and tail. The queue is a FIFO structure.
-The main difference between a linked list and a queue is that the queue only allow us to add items to 
+The main difference between a linked list and a queue is that the queue only allows us to add items to 
 its tail and remove items from its head.
 
 ![](./assets/queue.jpg)
@@ -163,7 +163,7 @@ its tail and remove items from its head.
 - Traversing O(n)
 
 Priority queues insert elements in a position based on its priority level. Some implementations of
-priority queue use a heap data structure under the hood so its execution tames are the same as a 
+priority queue use a heap data structure under the hood so its execution times are the same as a 
 standard queue.
 
 ## Heap
@@ -211,8 +211,8 @@ It is common to work with multiple sets and perform operations like:
 - Traversing O(n)
 - Union O(n + m) where n and m are the number of items in each set
 - Intersection O(n) where n is the number of items in the smallest set
-- Disjunction (AKA simetric difference) O(n) where n is the number of items in the smallest set
-- Substraction O(n) where n is the number of items in right side of the operator
+- Disjunction (AKA symmetric difference) O(n) where n is the number of items in the smallest set
+- Subtraction O(n) where n is the number of items in right side of the operator
 
 ## Hash table
 A  hash table (AKA hash map) is a data structure used to implement an associative array, 
